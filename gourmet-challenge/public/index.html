@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111d25">
+  <meta name="description" content="The Gourmet Challenge: sei chef, sei portate, una corona. Vota e scopri la classifica.">
+  <title>The Gourmet Challenge · Casa Giuliano/Conti</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container topbar">
+      <a class="brand" href="#" aria-label="Gourmet Challenge homepage">
+        <span class="brand-mark">✳</span>
+        <span><strong>GOURMET</strong><small>CHALLENGE CLUB</small></span>
+      </a>
+      <div class="location">📍 CASA GIULIANO / CONTI</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="sparkle">✦</span> THE ULTIMATE DINNER SHOWDOWN</p>
+          <h1>Six chefs.<br>Six courses.<br><em>One crown.</em></h1>
+          <p class="hero-description">Una notte. Dieci giudici. Quattro criteri. Il miglior chef vince tutto (tranne forse l'amicizia). 🍷</p>
+          <div class="hero-pills"><span>👨🏻‍🍳 6 CHEF</span><span>⚖️ 10 GIUDICI</span><span>🏆 1 VINCITORE</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="ring ring-one"></div><div class="ring ring-two"></div><span class="cup">🏆</span><span class="art-caption">EST. 2026 · CHEF'S TABLE</span></div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="status-line"><span id="live-status" class="status-pill">Caricamento...</span><span id="progress-status">Preparazione della sfida...</span></div>
+      <nav class="tabs" aria-label="Sezioni dell'app">
+        <button type="button" class="tab active" data-tab="vote" aria-current="page">🍽️ Vota i piatti</button>
+        <button type="button" class="tab" data-tab="results">🏆 Classifica</button>
+        <button type="button" class="tab" data-tab="admin">⚙️ Organizza</button>
+      </nav>
+
+      <section id="vote-panel" class="panel" aria-labelledby="vote-heading">
+        <div class="section-title"><div><p class="eyebrow dark">01 / THE JURY</p><h2 id="vote-heading">Il tuo voto conta.</h2><p>Quattro criteri, da 1 a 10. Gli chef votano tutti i piatti tranne il proprio.</p></div></div>
+        <div id="vote-content"><div class="card loading">Caricamento partecipanti...</div></div>
+      </section>
+
+      <section id="results-panel" class="panel" aria-labelledby="results-heading" hidden>
+        <div class="section-title"><div><p class="eyebrow dark">02 / THE LEADERBOARD</p><h2 id="results-heading">The winner takes it all.</h2><p>La media dei quattro criteri determina la classifica finale. Tutti pesano allo stesso modo.</p></div><button id="refresh-results" class="button button-subtle" type="button">↻ Aggiorna</button></div>
+        <div id="results-content"><div class="card loading">Caricamento classifica...</div></div>
+      </section>
+
+      <section id="admin-panel" class="panel" aria-labelledby="admin-heading" hidden>
+        <div class="section-title"><div><p class="eyebrow dark">03 / THE ORGANIZER</p><h2 id="admin-heading">Dietro le quinte.</h2><p>Seleziona gli chef, assegna le portate e distribuisci i codici personali.</p></div></div>
+        <div id="admin-content"></div>
+      </section>
+
+      <aside class="rules-note"><span>✦</span><p><strong>THE HOUSE RULES</strong> · Budget uguale per tutti · Un vino abbinato a ogni piatto · Preparazione a casa, impiattamento in loco · <strong>NO FISH 🐟🚫</strong></p></aside>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container"><span>THE GOURMET CHALLENGE</span><span>FRIENDSHIP ENDS WHERE THE COMPETITION BEGINS. 😈❤️</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

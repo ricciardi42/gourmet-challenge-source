@@ -1,0 +1,15 @@
+{
+  "name": "gourmet-challenge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Private phone voting, shared ranking and charts for a 6-chef gourmet competition.",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "test": "node --test test/*.test.js",
+    "deploy": "wrangler pages deploy public --project-name gourmet-challenge"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}
